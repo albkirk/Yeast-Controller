@@ -13,20 +13,20 @@
 
 // HARWARE & SOFTWARE Version
 #define BRANDName "AlBros_Team"                         // Hardware brand name
-#define MODELName "GenBox_A"                            // Hardware model name
-#define SWVer "10.12"                                   // Major.Minor Software version (use String 01.00 - 99.99 format !)
+#define MODELName "Yeast"                               // Hardware model name
+#define SWVer "01.05"                                   // Major.Minor Software version (use String 01.00 - 99.99 format !)
 
 // Power Source & Battery Level
-bool BattPowered = true;                                // Is the device battery powered?
+bool BattPowered = false;                               // Is the device battery powered?
 #define Batt_L_Thrs 15                                  // Battery level threshold [0%-100%] (before slepping forever).
 
 // GPIO to Function Assignment
-#define Using_ADC false                                 // will this device use the ADC? (if not it will measure the internal voltage)
+#define Using_ADC true                                  // will this device use the ADC? (if not it will measure the internal voltage)
 #define LED_esp 2                                       // ESP Led is connected to GPIO 2. -1 means NOT used!
-#define DHTTYPE 2                                       // use 2 for "DHT22", or 3 for "AM2320" to select the DHT Model
+#define DHTTYPE 3                                       // use 1 for "DHT11", 2 for "DHT22", or 3 for "AM2320" to select the DHT Model
 #define DHTPIN -1                                       // GPIO connected to DHT Data PIN. -1 means NO DHT used!
-#define SDAPIN -1                                       // GPIO connected to (AM) I2C SDA PIN. -1 means NO SDA used!
-#define SCKPIN -1                                       // GPIO connected to (AM) I2C SCK PIN. -1 means NO SCK used!
+#define SDAPIN 4                                        // GPIO connected to (AM) I2C SDA PIN. -1 means NO SDA used! --> Wemos D2 PIN
+#define SCKPIN 5                                        // GPIO connected to (AM) I2C SCK PIN. -1 means NO SCK used! --> Wemos D1 PIN
 #define BUZZER -1                                       // (Active) Buzzer pin. Suggest to use pin 0.  -1 means NOT used!
 
 
@@ -70,8 +70,8 @@ struct __attribute__((__packed__)) strConfig {
 void config_defaults() {
     Serial.println("Setting config Default values");
 
-    strcpy(config.DeviceName, "ESP_Generic");             // Device Name
-    strcpy(config.Location, "MainRoom");                  // Device Location
+    strcpy(config.DeviceName, "Quentinho");               // Device Name
+    strcpy(config.Location, "Casa");                      // Device Location
     strcpy(config.ClientID, "001001");                    // Client ID (used on MQTT)
     config.ONTime = 60;                                   // 0-255 seconds (Byte range)
     config.SLEEPTime = 0;                                 // 0-255 minutes (Byte range)

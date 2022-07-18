@@ -6,6 +6,7 @@ void  mqtt_custom(String reqtopic, String reqparam, StaticJsonDocument<200> data
     if (BattPowered) mqtt_publish(mqtt_pathtele(), "BattLevel", String(getVoltage()));
     mqtt_publish(mqtt_pathtele(), "Switch", String(SWITCH));
     mqtt_publish(mqtt_pathtele(), "Timer", String(TIMER));
+    ambient_data();
   }
   if ( reqparam == "Config" && bool(data["value"])) {
     mqtt_publish(mqtt_pathtele(), "OTA", String(config.OTA));

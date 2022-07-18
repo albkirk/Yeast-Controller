@@ -29,3 +29,38 @@ I'm coding my own variant of this popular project, with some inspiration and les
 	2. Power consumption optimization
 	3. Secure communication (https or other methods)
    
+
+MAX 
+12 v
+1.5 A
+5 W (Resistors)
+
+----> 15 Ohm
+R = 			3 * 5 Ohm	3 * 10 Ohm // 3 * 10 Ohm
+I = 12/15 = 	0.8 A		0.8 A
+P = 12 * 0.8 = 	9.6 W		9.6 W
+P per Res = 	3.2 W		1.6 W
+
+----> 20 Ohm
+R = 			4 * 5 Ohm	2 * 10 Ohm
+I = 12/20 = 	0.6 A		0.6 A
+P = 12 * 0.6 = 	7.2 W		7.2 W
+P per Res = 	1.8 W		3.6 W
+
+----> 25 Ohm
+R = 			5 * 5 Ohm
+I = 12/25 = 	0.48 A
+P = 12 * 0.8 = 	5.76 W
+P per Res = 	1.15 W
+
+----> 30 Ohm
+R = 			6 * 5 Ohm	3 * 10 Ohm
+I = 12/30 = 	0.4 A		0.4 A
+P = 12 * 0.6 = 	4.8 W		4.8 W
+P per Res = 	0.8 W		1.6 W
+
+----> 40 Ohm
+R = 			8 * 5 Ohm	4 * 10 Ohm
+I = 12/40 = 	0.3 A		0.3 A
+P = 12 * 0.6 = 	3.6 W		3.6 W
+P per Res = 	0.45 W		0.9 W
